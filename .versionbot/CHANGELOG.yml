@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add --hostID arg to Snapcast client startup
+      hash: df712db3c221df49efd84e915a98577e457c4f04
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Mark Chester <mark@chesterfamily.org>
+        signed-off-by: Mark Chester <mark@chesterfamily.org>
+        Connects-to: '#332'
+        connects-to: '#332'
+      author: Mark Chester
+      nested: []
+  version: 3.4.3
+  date: 2020-12-04T22:13:51.385Z
+- commits:
     - subject: 'docs: Patch ALSA bridge install script'
       hash: b85b466163620841a62f692f395b8490c5570f83
       body: ''
