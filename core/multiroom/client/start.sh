@@ -1,15 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Wait for sound supervisor to start
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
-while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start"; done
-
-# Get mode and snapserver from sound supervisor
-# mode: default to MULTI_ROOM
-# snapserver: default to multiroom-server (local)
-MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
-SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master" || true)
+MODE="MULTI_ROOM_CLIENT"
+SNAPSERVER=$SOUND_MULTIROOM_MASTER
 
 # --- ENV VARS ---
 # SOUND_MULTIROOM_LATENCY: latency in milliseconds to compensate for speaker hardware sync issues
